@@ -38,7 +38,11 @@ namespace TheIdentityServer.Data.Seed
                     ClientSecret = "postman-secret",
                     ConsentType = ConsentTypes.Explicit,
                     DisplayName = "Postman UI App",
-                    RedirectUris = { new Uri("https://oauth.pstmn.io/v1/callback") },
+                    //RedirectUris = { new Uri("https://oauth.pstmn.io/v1/callback") },
+                    RedirectUris = {
+                        new Uri("https://oauth.pstmn.io/v1/callback"), //for postman desktop version
+                        new Uri("https://oauth.pstmn.io/v1/browser-callback") //for desktop web version
+                    },
                     Permissions =
                     {
                         Permissions.Endpoints.Authorization,

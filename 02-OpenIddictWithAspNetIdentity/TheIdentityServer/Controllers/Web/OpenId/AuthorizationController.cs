@@ -269,6 +269,15 @@ namespace TheIdentityServer.Controllers.Web.OpenId
             identity.SetDestinations(GetDestinations);
 
             return SignIn(new ClaimsPrincipal(identity), OpenIddictClientAspNetCoreDefaults.AuthenticationScheme);
+
+            // var redirect = await applicationManager.GetRedirectUrisAsync(application);
+           
+            // if (redirect!=null && redirect.Count() > 0)
+            // {
+            //     return Redirect(redirect.FirstOrDefault()??string.Empty);
+            // }
+
+            //  return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 
         [Authorize, FormValueRequired("submit.Deny")]
