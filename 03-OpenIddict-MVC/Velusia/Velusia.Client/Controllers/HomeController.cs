@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OpenIddict.Client.AspNetCore;
+using OpenIddict.Validation.SystemNetHttp;
 
 namespace Velusia.Client.Controllers;
 
@@ -26,7 +27,7 @@ public class HomeController : Controller
         // authentication options shouldn't be used, a specific scheme can be specified here.
         var token = await HttpContext.GetTokenAsync(OpenIddictClientAspNetCoreConstants.Tokens.BackchannelAccessToken);
 
-        using var client = _httpClientFactory.CreateClient();
+        using var client = _httpClientFactory.CreateClient(typeof(OpenIddictValidationSystemNetHttpOptions).Assembly.GetName().Name);
 
         using var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:44313/api/message");
         request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);

@@ -143,7 +143,15 @@ public class Startup
                 ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
             });
 
-        
+        // services.AddHttpClient("uri-group") //default healthcheck registration name for uri ( you can change it on AddUrlGroup )
+        //         .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler()
+        //         {
+        //             ClientCertificateOptions = ClientCertificateOption.Manual,
+        //             ServerCertificateCustomValidationCallback = (httpRequestMessage, cert, cetChain, policyErrors) =>
+        //             {
+        //                 return true;
+        //             }
+        //         });
 
         services.AddControllersWithViews();
 
