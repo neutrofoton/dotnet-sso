@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Velusia.Server", "Velusia.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Velusia.Client", "Velusia.Client\Velusia.Client.csproj", "{8CFEA1C9-AB3F-41A0-98C9-748A2EB138FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Velusia.ClientOfAnother", "Velusia.ClientOfAnother\Velusia.ClientOfAnother.csproj", "{F1E2A7CE-1CC9-47AF-9172-332815D0BCC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8CFEA1C9-AB3F-41A0-98C9-748A2EB138FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CFEA1C9-AB3F-41A0-98C9-748A2EB138FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CFEA1C9-AB3F-41A0-98C9-748A2EB138FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E2A7CE-1CC9-47AF-9172-332815D0BCC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E2A7CE-1CC9-47AF-9172-332815D0BCC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E2A7CE-1CC9-47AF-9172-332815D0BCC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E2A7CE-1CC9-47AF-9172-332815D0BCC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
